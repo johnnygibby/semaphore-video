@@ -5,3 +5,8 @@
     - name: Print OS info
       ansible.builtin.package:
         name: httpd
+    - name: Start httpd service
+      ansible.builtin.service:
+        name: httpd
+        state: started  # Start the service
+        enabled: true   # Enable the service to start on boot
